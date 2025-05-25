@@ -6,6 +6,7 @@ nushell script that provides a `mommy` function which offers praise and encourag
 
 the default prefix sets the color to a light pink but you can change it to any other prefix
 
+<img src="example.png" alt="Example">
 
 i am not responsible for any damage to your mental health
 
