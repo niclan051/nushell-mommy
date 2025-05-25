@@ -75,6 +75,17 @@ mommy asdfhjkl
 # output: Don't worry, mommy is here to help you~ ❤️
 ```
 
+### shameless mode
+
+you can make the function run automatically after every command by setting it as a `pre_prompt` hook:
+
+```nu
+$env.config.hooks.pre_prompt ++= [{ mommy }]
+
+pwd
+# output: mommy is so proud of you~ ❤️
+```
+
 ## limitations
 
 any command part in quotes (`"like" "this"`) will be interpreted as if it was not quoted
