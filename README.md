@@ -1,4 +1,5 @@
 # `niclan051/nushell-mommy`
+###### i have no idea why i decided to do this
 
 rewritten from [sudofox/shell-mommy](https://github.com/sudofox/shell-mommy)
 
