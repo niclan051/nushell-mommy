@@ -1,6 +1,5 @@
 def mommy [
-  command: string # command you want to run
-  ...args: any # command arguments
+  ...command: any # command
 ]: nothing -> nothing {
  
   def pick_random [words: list<string>]: nothing -> string {
@@ -63,7 +62,7 @@ def mommy [
   let affectionate_term = pick_random $affectionate_terms
   
   try {
-      nu -l -c $"($command) ($args | str join ' ')"
+      nu -l -c $"($command | str join ' ')"
   } catch {}
   
   let success = $env.LAST_EXIT_CODE == 0
