@@ -79,6 +79,8 @@ any command part in quotes (`"like" "this"`) will be interpreted as if it was no
 
 to work around that, wrap it in quotes again (`""like"" ""this""`)
 
+in case that doesn't work, wrap it in a raw string (`r#'"like"'# r#'"this"'#`)
+
 ## example
 
 ```nu
