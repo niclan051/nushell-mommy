@@ -15,7 +15,7 @@ def mommy [
   
   let $color              = $config | get -i color              | default (ansi lightpink1)
   let $roles              = $config | get -i roles              | default "mommy"           | split row "/"
-  let $pronoun            = $config | get -i pronoun            | default "her"
+  let $pronouns           = $config | get -i pronouns           | default "her"             | split row "/"
   let $affectionate_terms = $config | get -i affectionate_terms | default "kitten"          | split row "/"
   let $emoji              = $config | get -i emoji              | default $"(ansi red)❤️"
   let $only_negative      = $config | get -i only_negative      | default false
@@ -59,6 +59,7 @@ def mommy [
   ]
   
   let role              = pick_random $roles
+  let pronoun           = pick_random $pronouns
   let affectionate_term = pick_random $affectionate_terms
   
   try {
@@ -83,7 +84,7 @@ def mommy [
   $config
   | upsert color              ($color)
   | upsert roles              ($roles              | str join "/")
-  | upsert pronoun            ($pronoun)
+  | upsert pronouns           ($pronouns           | str join "/")
   | upsert affectionate_terms ($affectionate_terms | str join "/")
   | upsert emoji              ($emoji)
   | upsert only_negative      ($only_negative)
