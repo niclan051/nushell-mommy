@@ -1,5 +1,5 @@
-def mommy [
-  ...command: any # command
+def --wrapped mommy [
+  ...command: string # command
 ]: nothing -> nothing {
  
   def pick_random [words: list<string>]: nothing -> string {
